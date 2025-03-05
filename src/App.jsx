@@ -6,6 +6,8 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
+import BlogDetials from './pages/BlogDetials';
+import TeamDetails from './pages/TeamDetails';
 const App = () => {
   return (
     <BrowserRouter>
@@ -14,8 +16,10 @@ const App = () => {
           <Route index element={<Home />}/>
           <Route path='about' element={<About />}/>
           <Route path='blog' element={<Blog />}/>
+          <Route path='blog:id' element={<BlogDetials />}/>
           <Route path='contact' element={<Contact />}/>
           <Route path='services' element={<Services />}/>
+          <Route path='team' element={<TeamDetails />}/>
         </Route>
       </Routes>
     </BrowserRouter>
