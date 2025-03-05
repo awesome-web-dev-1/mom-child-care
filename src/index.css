@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+   body{
+    @apply bg-white overflow-x-hidden
+   }
+   h1,h2,h3,h4{
+    @apply font-bold leading-[1.4] text-balance font-quicksand
+   }
+   h1,h2,h3,h4{
+    @apply font-bold leading-[1.4] text-4xl sm:text-[46px] md:text-[56px] text-balance
+   }
+   h2{
+    @apply text-3xl md:text-[42px] leading-tight
+   }
+   h3{
+    @apply text-[20px]
+   }
+   p{
+    @apply text-[#3F444D] font-quicksand md:text-[18px]
+   }
+   input,textarea{
+    @apply outline-none w-full block h-full px-[25px]
+   }
+   NavLink{
+    @apply font-quicksand
+   }
+   Link{
+    @apply font-quicksand
+   }
+   span{
+    @apply font-quicksand
+   }
+}
+
+@layer utilities{
+    .container{
+        @apply px-4 mx-auto xs:max-w-[520px] sm:max-w-[740px] md:max-w-[960px] lg:max-w-[1150px] xl:max-w-[1350px]
+    }
+    .section{
+        @apply py-[100px]
+    }
+    .subtitle{
+        @apply text-[#00715D]
+    }
+    .input-field{
+        @apply border border-[#D9DADB] h-[52px] 
+    }
+    .img-cover{
+        @apply w-full h-full object-cover
+    }
+    
+}
+@layer components{
+    .btn{
+        @apply bg-[#00715D] text-white px-8 py-4 hover:bg-[#005b4b] transition-colors font-semibold block max-w-max
+    }
+    .link{
+        @apply flex items-center text-[#00715D] font-semibold hover:text-[#0e362e] transition-colors duration-200
+    }
+}
+
+/* =============
+    Home page*/
+/* ============= */
+/* Header */
+.header{
+    @apply py-[25px] w-full fixed top-0 left-0 z-10 transition-transform
+}
+.header.active{
+    background: white;
+    animation: slideIn 0.5s ease-in-out forwards;
+    box-shadow: 0 2px 0 #0002;
+}
+@keyframes slideIn{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.navbar{
+    @apply absolute top-0 left-0 max-w-[360px] w-full bg-neutral-100 h-[100vh] p-8 z-20 flex flex-col translate-x-[-370px] transition-transform duration-500 md:hidden
+}
+.navbar.active{
+    @apply translate-x-0
+}
+.nav-link{
+    @apply hover:text-[#00715D] transition-colors font-semibold
+}
+.nav-link.active{
+    @apply text-[#00715D]
+}
+.overlay{
+    @apply fixed top-0 left-0 z-10 bg-neutral-800/70 w-full h-[100vh] opacity-0 pointer-events-none transition-opacity duration-500 md:hidden
+}
+.overlay.active{
+    @apply opacity-100 pointer-events-auto
+}
+.hero{
+    @apply section pb-[120px] md:pt-48
+}
+.hero-container{
+    @apply container grid md:gap-[45px] gap-[60px] md:grid-cols-[0.8fr,1fr] md:items-center
+}
+/* About section */
+.about-banner{
+    @apply grid grid-cols-12 mx-auto relative
+}
+.top-banner{
+    grid-column: 4/-1;
+    grid-row:1/span 4;
+}
+.bottom-banner{
+    grid-column: 1/9;
+    grid-row: 2/span 5;
+}
+/* FAQ Question */
+.question-text {
+    @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+}
+  
+.question-text.active {
+    @apply max-h-[500px] transition-all duration-300 ease-in-out;
+}
+  
+
+/* Footer link */
+.footer-link{
+    @apply bg-[#FFD249] text-[33px] rounded-full p-[5px] hover:bg-[#c09b2c] transition-all duration-300
+}
+  
+/* ========================
+    end of home page
+======================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================
+    About page
+======================== */
+.about-page-card-wrapper{
+ @apply grid gap-[31px] mt-[35px] md:mt-[70px] md:grid-cols-4 sm:grid-cols-2
+}
+.about-page-card{
+    @apply relative max-w-max mx-auto
+}
+.about-page-card-content{
+    @apply absolute left-1/2 -translate-x-1/2 -bottom-5 bg-[#00715D] w-[70%] opacity-0 transition-opacity duration-200
+}
+.about-page-card:hover .about-page-card-content{
+    opacity: 1;
+}
