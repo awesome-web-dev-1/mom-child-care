@@ -23,7 +23,7 @@ const Home = () => {
           </p>
           <Link to='' className="btn">Book a Session</Link>
         </div>
-        <div className="relative max-w-max mx-auto">
+        <div className="relative max-w-max mx-auto md:mx-0">
           <img src="/images/shape-small.png" alt="shape small" className="absolute -top-8 -left-6" />
           <img src="/images/hero-banner.png" alt="hero image" width={599} height={489}/>
           <img src="/images/shape-1.png" alt="shape img" className="absolute -bottom-9 -right-10" />
