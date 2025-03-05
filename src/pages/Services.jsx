@@ -16,18 +16,17 @@ const Services = () => {
         <div className="container">
           <h2 className="text-center">It is all we do</h2>
           <p className="max-w-[632px] text-center mx-auto">We provide a range of resources and guidance to support their physical, cognitive, emotional, and social growth.</p>
-        <div className="flex gap-12 overflow-x-auto">
           <div className="grid md:grid-cols-2 gap-6 mt-[40px] min-w-full">
             {servicesPageItems.map((item)=>(
-              <div className="grid grid-cols-2 border border-[#D9DADB] p-5 bg-white" key={item.id}>
+              <div className="grid xs:grid-cols-2 border border-[#D9DADB] p-5 bg-white" key={item.id}>
                 
-                <div>
+                <div className="order-1 xs:order-none mt-3 xs:mt-0">
                   <div className="flex gap-[5px]">
                     <img src={item.icon} alt={item.title} className="flex-shrink-0" />
                     <h3 className="card-title">{item.title}</h3>
                   </div>
                   <div>
-                    <p className="mt-4 mb-9 max-h-[72px] overflow-hidden">{item.text}</p>
+                    <p className="mt-4 mb-9">{item.text}</p>
                     <Link className="link flex items-center gap-1">
                     {item.link}
                     <IoArrowForward />
@@ -35,37 +34,12 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div className="">
-                  <img src={item.imgUrl} alt={item.title} className="img-cover" />
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 mt-[40px] min-w-full">
-            {servicesPageItems.map((item)=>(
-              <div className="grid grid-cols-2 border border-[#D9DADB] p-5 bg-white" key={item.id}>
-                
                 <div>
-                  <div className="flex gap-[5px]">
-                    <img src={item.icon} alt={item.title} className="flex-shrink-0" />
-                    <h3 className="card-title">{item.title}</h3>
-                  </div>
-                  <div>
-                    <p className="mt-4 mb-9 max-h-[72px] overflow-hidden">{item.text}</p>
-                    <Link className="link flex items-center gap-1">
-                    {item.link}
-                    <IoArrowForward />
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="">
                   <img src={item.imgUrl} alt={item.title} className="img-cover" />
                 </div>
               </div>
             ))}
           </div>
-        </div>
         </div>
       </section>
     </>

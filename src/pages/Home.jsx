@@ -23,7 +23,7 @@ const Home = () => {
           </p>
           <Link to='' className="btn">Book a Session</Link>
         </div>
-        <div className="relative max-w-max">
+        <div className="relative max-w-max mx-auto">
           <img src="/images/shape-small.png" alt="shape small" className="absolute -top-8 -left-6" />
           <img src="/images/hero-banner.png" alt="hero image" width={599} height={489}/>
           <img src="/images/shape-1.png" alt="shape img" className="absolute -bottom-9 -right-10" />
@@ -101,7 +101,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <img src="/images/banner image.png" alt="banner" className="absolute -top-20 right-0 -z-10 md:-top-1/2 md:bottom-1/2 md:translate-y-1/2 md:w-1/2 h-[818px] object-cover"/>
+      <img src="/images/banner image.png" alt="banner" className="absolute -top-20 right-0 -z-10 md:-top-1/2 md:bottom-1/2 md:translate-y-1/2 md:w-1/2 img-cover"/>
       <img src="/images/shape-5.png" className="absolute top-0 right-0" alt="shape image" />
       <img src="/images/shape-6.png" className="absolute bottom-0 left-0" alt="shape image" />
     </section>
@@ -143,11 +143,11 @@ const Home = () => {
 
     {/* FAQ */}
     <section className="py-[100px] sm:mt-72">
-      <div className="container flex items-center relative flex-wrap">
+      <div className="container grid md:grid-cols-2">
         <div className="">
-          <img src="/images/faq-banner.png" alt="banner" />
+          <img src="/images/faq-banner.png" alt="banner" className="img-cover max-h-[400px] md:max-h-none" />
         </div>
-        <div className="absolute sm:left-[35%] left-0 max-w-[787px] bg-white p-10 border border-[#D9DADB]">
+        <div className=" w-full bg-white p-10 border border-[#D9DADB]">
         <p className="subtitle">FAQ</p>
         <div className="relative max-w-max mb-10">
           <h2>Frequently Asked Questions</h2>
@@ -253,12 +253,12 @@ const Home = () => {
             <Link to='about' className="border border-[#00715d] py-4 px-9 text-[#00715d]   flex max-w-max items-center gap-3 mt-8 hover:bg-[#00715d] transition-colors hover:text-neutral-50 duration-300">View More 
               <IoArrowForward />
             </Link>
-      </div>
+        </div>
         <div className="grid gap-[30px] md:grid-cols-2 mt-[40px] md:mt-[70px]">
           {testimonialsItems.map((item)=>(
-            <div className="flex flex-col sm:flex-row items-stretch gap-[22px] p-[14px] border border-[#D9DADB]">
+            <div className="grid xs:grid-cols-2 gap-[22px] p-[14px] border border-[#D9DADB]">
               <div className="flex-shrink-0">
-                <img src={item.imgURL} alt={item.author} width={222} height={251} className="sm:h-full object-cover w-full" />
+                <img src={item.imgURL} alt={item.author} width={222} height={251} className="img-cover" />
               </div>
               <div className="">
                 <span className="text-[37px] text-[#00715D]">
