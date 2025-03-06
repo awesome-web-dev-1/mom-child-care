@@ -18,12 +18,9 @@ const Contact = () => {
     </section>
     <ContactSec />
      {/* FAQ */}
-     <section className="py-[100px]">
-      <div className="container grid md:grid-cols-2">
-        <div className="">
-          <img src="/images/faq-banner.png" alt="banner" className="img-cover max-h-[400px] md:max-h-none" />
-        </div>
-        <div className=" w-full bg-white p-10 border border-[#D9DADB]">
+    <section className="section">
+      <div className="container bg-[url(/images/faq-banner.png)] bg-no-repeat py-8 grid">
+      <div className="sm:max-w-[60%] w-full bg-white p-10 border border-[#D9DADB] sm:ml-auto">
         <p className="subtitle">FAQ</p>
         <div className="relative max-w-max mb-10">
           <h2>Frequently Asked Questions</h2>
