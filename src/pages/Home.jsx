@@ -29,7 +29,7 @@ const Home = () => {
           <img src="/images/shape-1.png" alt="shape img" className="absolute -bottom-9 -right-10" />
         </div>
       </div>
-        <div className="hidden md:block w-[50%] h-[650px] absolute top-0 right-0 bg-[#FFD967] -z-10"></div>
+        <div className="hidden md:block w-[50%] h-[664px] absolute top-0 right-0 bg-[#FFD967] -z-10"></div>
     </section>
     {/* About section */}
     <section className="section">
