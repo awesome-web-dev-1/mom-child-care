@@ -25,11 +25,11 @@ const Home = () => {
         </div>
         <div className="relative max-w-max mx-auto md:mx-0">
           <img src="/images/shape-small.png" alt="shape small" className="absolute -top-8 -left-6" />
-          <img src="/images/hero-banner.png" alt="hero image" width={599} height={489}/>
+          <img src="/images/hero-banner.png" alt="hero banner" width={599} height={489}/>
           <img src="/images/shape-1.png" alt="shape img" className="absolute -bottom-9 -right-10" />
         </div>
       </div>
-        <div className="hidden md:block w-[50%] h-[75%] absolute top-0 right-0 bg-[#FFD967] -z-10"></div>
+        <div className="hidden md:block w-[50%] h-[650px] absolute top-0 right-0 bg-[#FFD967] -z-10"></div>
     </section>
     {/* About section */}
     <section className="section">
@@ -143,11 +143,8 @@ const Home = () => {
 
     {/* FAQ */}
     <section className="py-[100px] sm:mt-72">
-      <div className="container grid md:grid-cols-2">
-        <div className="">
-          <img src="/images/faq-banner.png" alt="banner" className="img-cover max-h-[400px] md:max-h-none" />
-        </div>
-        <div className=" w-full bg-white p-10 border border-[#D9DADB]">
+      <div className="container bg-[url(/images/faq-banner.png)] bg-no-repeat py-8 grid">
+      <div className="sm:max-w-[60%] w-full bg-white p-10 border border-[#D9DADB] sm:ml-auto">
         <p className="subtitle">FAQ</p>
         <div className="relative max-w-max mb-10">
           <h2>Frequently Asked Questions</h2>
@@ -179,7 +176,7 @@ const Home = () => {
     </section>
 
     {/* Blog */}
-    <section className="section pb-[100px] my-20 xs:my-0">
+    <section className="section pb-[100px]">
       <div className="container">
         <div className="md:flex md:justify-between md:items-start">
           <div>
