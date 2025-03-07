@@ -1,7 +1,8 @@
 import { IoArrowForward} from "react-icons/io5"
 import { Link } from "react-router-dom"
 import { blogPageCardItems } from "../constant/data"
-import ContactSec from "../components/ContactSec"
+import ContactSec from "../components/common/ContactSec"
+
 const Blog = () => {
   return (
     <>
@@ -48,7 +49,7 @@ const Blog = () => {
       </div>
       <img src="/images/banner-4.png" alt="banner image" className="max-h-[328px] w-full object-cover md:max-h-none" />
     </section>
-
+    
 
     <section className="section">
       <div className="container grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -72,8 +73,9 @@ const Blog = () => {
         ))}
       </div>
     </section>
-
     <ContactSec />
+
+    
     </>
   )
 }

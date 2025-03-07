@@ -1,5 +1,5 @@
 import { missionItems } from "../../constant/data"
-import { Link } from 'react-router-dom'
+import Button from "../common/Button"
 const MissionSec = () => {
   return (
     <section className="section pb-32">
@@ -8,8 +8,7 @@ const MissionSec = () => {
               <p className="subtitle">Our Mission</p>
               <h2>Building a Brighter Future for Reliable ChildCare</h2>
               <p className="mt-4 mb-10">We are dedicated to helping Child thrive, succeed, and find fulfillment in all aspects of their lives.</p>
-    
-              <Link to='about' className="btn">Learn More</Link>
+              <Button to='about' className='btn' label='Learn More'  />
             </div>
             <div className="grid gap-8 sm:grid-cols-2">
               {missionItems.map((item)=>(

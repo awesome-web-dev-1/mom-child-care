@@ -14,16 +14,16 @@ export const  missionItems = [
 ]
 
 export const healItems = [
-    {key:1,title:'Emotional Healing',text:'Our content explores the developmental stages of children and support their emotional and social growth.'},
-    {key:2,title:'Self-Care',text:'We offer practical tips and strategies to help single parents navigate the challenges of childcare.'},
-    {key:3,title:'Mindset and Empowerment',text:'We teach children to see challenges as opportunities and to always keep learning and growing.'},
-    {key:4,title:'Relationship & Boundaries',text:'Establishing healthy routines and setting clear expectations can help your child feel safe and secure.'},
+    {id:1,title:'Emotional Healing',text:'Our content explores the developmental stages of children and support their emotional and social growth.'},
+    {id:2,title:'Self-Care',text:'We offer practical tips and strategies to help single parents navigate the challenges of childcare.'},
+    {id:3,title:'Mindset and Empowerment',text:'We teach children to see challenges as opportunities and to always keep learning and growing.'},
+    {id:4,title:'Relationship & Boundaries',text:'Establishing healthy routines and setting clear expectations can help your child feel safe and secure.'},
 ]
 
 export const blogCardItems = [
-    {imgURL:'/images/card-1.png',title:'Our Childcare Guide',text:'This guide provides practical support and empowering advice for children  and lots of supportive way.',link:'Listen now'},
-    {imgURL:'/images/card-2.png',title:'ORaising Resilient Kids',text:'Nurturing strength and adaptability in young minds. Equipping children to face challenges with courage. ',link:'Listen now'},
-    {imgURL:'/images/card-2.png',title:'Financial Security ',text:"Building a strong foundation for the future. Protecting what matters most: your family's well-being.",link:'Listen now'},
+    {id:1,imgURL:'/images/card-1.png',title:'Our Childcare Guide',text:'This guide provides practical support and empowering advice for children  and lots of supportive way.',link:'Listen now'},
+    {id:2,imgURL:'/images/card-2.png',title:'ORaising Resilient Kids',text:'Nurturing strength and adaptability in young minds. Equipping children to face challenges with courage. ',link:'Listen now'},
+    {id:3,imgURL:'/images/card-2.png',title:'Financial Security ',text:"Building a strong foundation for the future. Protecting what matters most: your family's well-being.",link:'Listen now'},
 ]
 
 

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import Button from "../common/Button"
 const Hero = () => {
   return (
     <section className="hero">
@@ -7,7 +7,7 @@ const Hero = () => {
           <h1>Caring Hands, Quality Home Care for Your Little One</h1>
           <p className="mt-4 mb-[30px]">Welcome to Empowered Moms, a supportive space committed to empowering single mothers in managing child care and achieving success. Our mission is to offer the guidance, resources and thrive in every aspect of life.
           </p>
-          <Link to='' className="btn">Book a Session</Link>
+          <Button label='Book a Session' to='' className='btn' />
         </div>
         <div className="relative max-w-max mx-auto md:mx-0">
           <img src="/images/shape-small.png" alt="shape small" className="absolute -top-8 -left-6" />

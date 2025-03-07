@@ -21,8 +21,8 @@ const App = () => {
           <Route path='contact' element={<Contact />}/>
           <Route path='services' element={<Services />}/>
           <Route path='team:id' element={<TeamDetails />}/>
+          <Route path='*' element={<Error />} />
         </Route>
-        <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Button from "../common/Button"
 
 const AboutSec = () => {
   return (
@@ -10,7 +11,7 @@ const AboutSec = () => {
           <p className="text mt-4 mb-16">
           Reliable child care is essential for single moms striving to balance work, family, and personal growth. It provides a safe and nurturing environment for children, allowing mothers to pursue their careers and goals with peace of mind. Access to trustworthy child care resources helps single mothers manage their busy lives more effectively.
           </p>
-          <Link to='about' className='btn'>Learn More</Link>
+          <Button to='about' className='btn' label='Learn More'  />
         </div>
         <div className="about-banner">
           <img src="/images/about-sec-banner-t.png" alt="about banner" className="top-banner" />
