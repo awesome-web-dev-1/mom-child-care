@@ -125,10 +125,11 @@ const About = () => {
           <div className="about-page-card-wrapper">
             {teams.map((team)=>(
               <div key={team.id} className='about-page-card'>
-                <Link to='TeamDetails'>
+                <Link to={`team/${team.id}`}>
                   <div>
                   <img src={team.imgUrl} alt={team.name} />
                   </div>
+
                   <div className='about-page-card-content'>
                   <p className='text-white text-center text-2xl'>{team.name}</p>
                   <p className='text-white text-center'>{team.identity}</p>

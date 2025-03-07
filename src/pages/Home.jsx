@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom"
 import { blogCardItems, faqQuestions, healItems, missionItems, testimonialsItems } from "../constant/data"
-import { IoAdd, IoArrowForward,IoCheckbox,IoRemove,IoStar } from "react-icons/io5"
+import { IoAdd, IoArrowForward,IoCheckbox,IoChevronBack,IoChevronForward,IoRemove,IoStar } from "react-icons/io5"
 import { useState } from "react"
 import { IoMdQuote } from "react-icons/io"
 import ContactSec from '../components/ContactSec'
+import Hero from "../components/home/Hero"
+import AboutSec from "../components/home/AboutSec"
+import MissionSec from "../components/home/missionSec"
+
+
 
 const Home = () => {
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
@@ -14,68 +19,10 @@ const Home = () => {
 
   return (
     <>
-    {/* Hero */}
-    <section className="hero">
-      <div className="hero-container">
-        <div>
-          <h1>Caring Hands, Quality Home Care for Your Little One</h1>
-          <p className="mt-4 mb-[30px]">Welcome to Empowered Moms, a supportive space committed to empowering single mothers in managing child care and achieving success. Our mission is to offer the guidance, resources and thrive in every aspect of life.
-          </p>
-          <Link to='' className="btn">Book a Session</Link>
-        </div>
-        <div className="relative max-w-max mx-auto md:mx-0">
-          <img src="/images/shape-small.png" alt="shape small" className="absolute -top-8 -left-6" />
-          <img src="/images/hero-banner.png" alt="hero banner" width={599} height={489}/>
-          <img src="/images/shape-1.png" alt="shape img" className="absolute -bottom-9 -right-10" />
-        </div>
-      </div>
-        <div className="hidden md:block w-[50%] h-[664px] absolute top-0 right-0 bg-[#FFD967] -z-10"></div>
-    </section>
-    {/* About section */}
-    <section className="section">
-      <div className="container grid gap-20 md:grid-cols-2">
-        <div className="md:order-1">
-          <p className="subtitle">About Us</p>
-          <h2 className="title">Finding Superior Care for Your Baby</h2>
-          <p className="text mt-4 mb-16">
-          Reliable child care is essential for single moms striving to balance work, family, and personal growth. It provides a safe and nurturing environment for children, allowing mothers to pursue their careers and goals with peace of mind. Access to trustworthy child care resources helps single mothers manage their busy lives more effectively.
-          </p>
-          <Link to='about' className='btn'>Learn More</Link>
-        </div>
-        <div className="about-banner">
-          <img src="/images/about-sec-banner-t.png" alt="about banner" className="top-banner" />
-          <img src="/images/about-sec-banner-b.png" alt="about banner" className="bottom-banner" />
-          <img src="/images/shape-small.png" className="absolute -top-8 -right-7 rotate-90" />
-          <img src="/images/shape-2.png" className="absolute -bottom-10 -left-10" />
-        </div>
-      </div>
-    </section>
-
-    {/* our mission section */}
-    <section className="section pb-32">
-      <div className="container grid gap-[73px] md:grid-cols-2">
-        <div className="max-w-[414px] w-full">
-          <p className="subtitle">Our Mission</p>
-          <h2>Building a Brighter Future for Reliable ChildCare</h2>
-          <p className="mt-4 mb-10">We are dedicated to helping Child thrive, succeed, and find fulfillment in all aspects of their lives.</p>
-
-          <Link to='about' className="btn">Learn More</Link>
-        </div>
-        <div className="grid gap-8 sm:grid-cols-2">
-          {missionItems.map((item)=>(
-            <div className="card" key={item.id}>
-              <div className="bg-[#00715D] max-w-max p-[14px] rounded-full">
-                <img src={item.imgURL} alt={item.title} />
-              </div>
-              <div className="">
-                <h3 className="pt-5 pb-4">{item.title}</h3>
-                <p className="">{item.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <Hero />
+    <AboutSec />
+    <MissionSec />
+    
     
 
     {/* Heal yourself section */}
@@ -118,7 +65,7 @@ const Home = () => {
             </div>
             
           </div>
-          <Link to='blog' className="border border-white py-4 px-9 text-white flex max-w-max items-center gap-3 mt-8 hover:bg-neutral-50 transition-colors hover:text-neutral-900 duration-300">View More 
+          <Link to={`blog`} className="border border-white py-4 px-9 text-white flex max-w-max items-center gap-3 mt-8 hover:bg-neutral-50 transition-colors hover:text-neutral-900 duration-300">View More 
             <IoArrowForward />
           </Link>
         </div>
@@ -237,8 +184,8 @@ const Home = () => {
 
     {/* Testimonials */}
     <section className="py-[100px]">
-      <div className="container">
-      <div className="md:flex md:justify-between md:items-start">
+      <div className="container grid md:grid-cols-2">
+      <div className="">
           <div>
             <p className="subtitle">Testimonial</p>
             <div className="relative max-w-max mb-10">
@@ -250,17 +197,27 @@ const Home = () => {
             <Link to='about' className="border border-[#00715d] py-4 px-9 text-[#00715d]   flex max-w-max items-center gap-3 mt-8 hover:bg-[#00715d] transition-colors hover:text-neutral-50 duration-300">View More 
               <IoArrowForward />
             </Link>
+        <div className="gap-5 flex mt-10">
+            <button className="bg-[#00715d] text-white rounded-full p-2">
+              <IoChevronBack size={30} />
+            </button>
+            <button className="bg-[#00715d] text-white rounded-full p-2">
+              <IoChevronForward size={30} />
+            </button>
         </div>
-        <div className="grid gap-[30px] md:grid-cols-2 mt-[40px] md:mt-[70px]">
+        </div>
+
+
+        <div className="flex gap-[30px] mt-[40px] md:mt-[70px]">
           {testimonialsItems.map((item)=>(
-            <div className="grid xs:grid-cols-2 gap-[22px] p-[14px] border border-[#D9DADB]">
-              <div className="flex-shrink-0">
-                <img src={item.imgURL} alt={item.author} width={222} height={251} className="img-cover" />
-              </div>
-              <div className="">
-                <span className="text-[37px] text-[#00715D]">
+            <div className="grid gap-[22px] p-[14px] border border-[#D9DADB] min-w-full">
+              <div className="flex-shrink-0 w-[150px] h-[150px] m-auto relative">
+                <img src={item.imgURL} alt={item.author} width={222} height={251} className="img-cover rounded-full" />
+                <span className="text-[37px] text-[#00715D] absolute top-0 left-0 bg-white rounded-full shadow-md">
                   <IoMdQuote />
                 </span>
+              </div>
+              <div className="">
                 <p className="">{item.text}</p>
                 <div className="flex text-2xl text-[#FFD53F] gap-2">
                   <IoStar />

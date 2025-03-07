@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { NavLink,Link } from "react-router-dom"
-import { navItems } from "../constant/data";
+import { navItems } from "../../constant/data";
 import { IoClose, IoMenu } from "react-icons/io5";
 const Header = () => {
     const [menuOpen,setMenuOpen] = useState(false);
