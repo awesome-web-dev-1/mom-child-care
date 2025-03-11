@@ -9,6 +9,7 @@ import Error from './pages/Error';
 import BlogDetials from './pages/BlogDetials';
 import TeamDetails from './pages/TeamDetails';
 import Layout from './components/layout/Layout';
+import ServicesDetail from './pages/servicesDetail';
 const App = () => {
   return (
     <BrowserRouter>
@@ -17,12 +18,13 @@ const App = () => {
           <Route index element={<Home />}/>
           <Route path='about' element={<About />}/>
           <Route path='blog' element={<Blog />}/>
-          <Route path='blog:id' element={<BlogDetials />}/>
+          <Route path='blog/:id' element={<BlogDetials />} />
           <Route path='contact' element={<Contact />}/>
           <Route path='services' element={<Services />}/>
+          <Route path='services:id' element={<ServicesDetail />}/>
           <Route path='team:id' element={<TeamDetails />}/>
-          <Route path='*' element={<Error />} />
         </Route>
+          <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
   )

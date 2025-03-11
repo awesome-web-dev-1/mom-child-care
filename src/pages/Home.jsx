@@ -10,22 +10,16 @@ import BlogSec2 from "../components/home/BlogSec2"
 
 
 const Home = () => {
-  const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
-
-  const handleToggleQuestion = (index) => {
-    setActiveQuestionIndex(activeQuestionIndex === index ? null : index);
-  };
-
   return (
     <>
-    <Hero />
-    <AboutSec />
-    <MissionSec />
-    <HealYourSelf />
-    <BlogSec1 />
-    <FaqSec />
-    <BlogSec2 />
-    <ContactSec />
+      <Hero />
+      <AboutSec />
+      <MissionSec />
+      <HealYourSelf />
+      <BlogSec1 />
+      <FaqSec className='py-[100px] sm:mt-72' />
+      <BlogSec2 />
+      <ContactSec />
     </>
   )
 }

@@ -10,7 +10,7 @@ const Contact = () => {
       </div>
     </section>
     <ContactSec />
-    <FaqSec />
+    <FaqSec className='section' />
 
     
     </>

@@ -1,6 +1,9 @@
 import { IoArrowForward } from "react-icons/io5"
 import { servicesPageItems } from "../constant/data"
 import { Link } from 'react-router-dom'
+import Cta from "../components/sections/Cta"
+import ContactSec from "../components/common/ContactSec"
+import ctaImg from '/images/services-cta-img.png'
 const Services = () => {
   return (
     <>
@@ -11,7 +14,6 @@ const Services = () => {
         <p className="max-w-[567px] mx-auto">We are dedicated to helping Child thrive, succeed, and find fulfillment in all aspects of their lives.</p>
       </div>
       </section>
-
       <section className="py-[80px] bg-[#FCFBF7]">
         <div className="container">
           <h2 className="text-center">It is all we do</h2>
@@ -27,7 +29,7 @@ const Services = () => {
                   </div>
                   <div>
                     <p className="mt-4 mb-9">{item.text}</p>
-                    <Link className="link flex items-center gap-1">
+                    <Link to={`ServicesDetail`} className="link flex items-center gap-1">
                     {item.link}
                     <IoArrowForward />
                     </Link>
@@ -42,6 +44,8 @@ const Services = () => {
           </div>
         </div>
       </section>
+      <Cta img={ctaImg} />
+      <ContactSec />
     </>
   )
 }

@@ -2,7 +2,8 @@ import { IoArrowForward} from "react-icons/io5"
 import { Link } from "react-router-dom"
 import { blogPageCardItems } from "../constant/data"
 import ContactSec from "../components/common/ContactSec"
-
+import Cta from "../components/sections/Cta"
+import blogCtaImg from '/images/banner-4.png'
 const Blog = () => {
   return (
     <>
@@ -27,7 +28,7 @@ const Blog = () => {
           <p className="text mt-3 mb-[40px] md:mt-5 md:mb-[70px]">
           I recently optimized my website's already fast loading times by focusing on CSS. Here's how you can do the same to boost your site's speed.
           </p>
-          <Link to='' className='link justify-end'>
+          <Link to={`blogDetials`} className='link justify-end'>
             Read Full
             <IoArrowForward />
           </Link>
@@ -37,20 +38,7 @@ const Blog = () => {
         </div>
       </div>
     </section>
-
-    <section className="section grid md:grid-cols-[0.5fr,1fr] md:gap-[18px] md:items-stretch">
-      <div className="bg-[#00715D] text-white py-[75px] px-[42px] md:order-1">
-        <h2 className="text-[28px]">Are You Ready to Explore More?</h2>
-        <p className="text-neutral-300 mt-4 mb-8">Don’t miss out on more creative ideas, parenting tips, and fun activities! Stay connected with us for the latest updates and exclusive offers.</p>
-        <Link to='' className="bg-[#FFD249] py-4 px-8 flex gap-3 text-neutral-900 items-center max-w-max transition-colors hover:bg-[#dead19]">
-          Join Our Community
-          <IoArrowForward />
-        </Link>
-      </div>
-      <img src="/images/banner-4.png" alt="banner image" className="max-h-[328px] w-full object-cover md:max-h-none" />
-    </section>
-    
-
+    <Cta img={blogCtaImg} />
     <section className="section">
       <div className="container grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         {blogPageCardItems.map((item)=>(
@@ -74,7 +62,6 @@ const Blog = () => {
       </div>
     </section>
     <ContactSec />
-
     
     </>
   )

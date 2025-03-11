@@ -2,14 +2,14 @@ import {  faqQuestions } from "../../constant/data"
 import { IoAdd,IoRemove } from "react-icons/io5"
 import { useState } from "react";
 
-const FaqSec = () => {
+const FaqSec = ({className}) => {
     const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
     
       const handleToggleQuestion = (index) => {
         setActiveQuestionIndex(activeQuestionIndex === index ? null : index);
       };
   return (
-    <section className="py-[100px] sm:mt-72">
+    <section className={className}>
       <div className="container bg-[url(/images/faq-banner.png)] bg-no-repeat py-8 grid">
       <div className="sm:max-w-[60%] w-full bg-white p-10 border border-[#D9DADB] sm:ml-auto">
         <p className="subtitle">FAQ</p>

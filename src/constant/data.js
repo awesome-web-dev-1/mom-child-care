@@ -6,6 +6,13 @@ export const navItems = [
     {id:5,label:'Services',path:'services'}
 ]
 
+export const sectionTitles = [
+    {aboutTitle:'About Us',aboutText:'Welcome to Empowered Moms, a place dedicated to supporting'},
+    {blogTitle:'About Us',blogText:'Welcome to Empowered Moms, a place dedicated to supporting'},
+    {contactTitle:'About Us',contactText:'Welcome to Empowered Moms, a place dedicated to supporting'},
+    {servicesTitle:'About Us',servicesText:'Welcome to Empowered Moms, a place dedicated to supporting'},
+]
+
 export const  missionItems = [
     {id:1,imgURL:'/images/icon-1.png',title:'Empowerment',text:'Empower them by providing the knowledge, guidance, and support necessary to overcome challenges.'},
     {id:2,imgURL:'/images/icon-2.png',title:'Community Building',text:'Build a supportive community where childcare providers can connect, share best practices.'},
@@ -86,3 +93,10 @@ export const servicesPageItems = [
     {id:6,imgUrl:'/images/services-card-img-6.png',title:'Flexible Hours for Busy Parents',text:"We understand the demands of modern life, so we offer flexible scheduling options to fit your needs. Whether you require full-time, part-time, or drop-in care, we’re here to support your family’s unique schedule.",link:'Find out more',icon:'/images/services-icon-6.svg'}
 ]
 
+//blog detials page
+export const blogDetailsItems = [
+    {id:1,title:'Magical Storytime Adventures',text:'Turn your living room into a magical storytelling haven with cozy blankets, fairy lights, and their favorite books. Let your child dress up as their favorite character, and add interactive storytelling props to bring their imagination to life.'},
+    {id:2,title:'Outer Space Exploration',text:'Transform your backyard into a mini space station with glow-in-the-dark stars, astronaut costumes, and fun facts about the solar system. Build DIY rockets using recycled materials and let your little astronaut embark on a space adventure.'},
+    {id:3,title:'Mini Chef Cooking Classes',text:'Invite your child into the kitchen to whip up delicious, kid-friendly recipes. Let them decorate cupcakes, create unique pizzas, or prepare a colorful fruit salad. Not only is it fun, but it also builds important life skills.'},
+    {id:4,title:"Nature Explorers' Day Out",text:'Take a walk in the park or your backyard and turn it into an exciting scavenger hunt. Provide a list of items like leaves, flowers, and stones for your child to find. End the day with a craft session using their collected treasures.'}
+]

@@ -40,7 +40,7 @@
         @apply px-4 mx-auto xs:max-w-[520px] sm:max-w-[740px] md:max-w-[960px] lg:max-w-[1150px] xl:max-w-[1350px]
     }
     .section{
-        @apply py-[100px]
+        @apply pt-[100px] pb-[60px]
     }
     .subtitle{
         @apply text-[#00715D]
