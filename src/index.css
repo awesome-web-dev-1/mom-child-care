@@ -106,6 +106,21 @@
 .hero-container{
     @apply container grid md:gap-[45px] gap-[60px] md:grid-cols-[0.8fr,1fr] md:items-center
 }
+.hero-banner{
+    @apply relative max-w-max mx-auto md:mx-0
+}
+.hero-banner::before{
+    content: url(/public/images/shape-small.png);
+    position: absolute;
+    top: -26px;
+    left: -24px;
+}
+.hero-banner::after{
+    content: url(/public/images/shape-1.png);
+    position: absolute;
+    bottom:-36px;
+    right:-40px;
+}
 /* About section */
 .about-banner{
     @apply grid grid-cols-12 mx-auto relative

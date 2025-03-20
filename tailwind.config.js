@@ -16,6 +16,11 @@ export default {
       fontFamily: {
         quicksand: ["Quicksand", "serif"],
       },
+      colors:{
+        primary:'#00715d',
+        primary2:'#005b4b',
+        
+      }
     },
   },
   plugins: [],

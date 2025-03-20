@@ -13,7 +13,7 @@ const MissionSec = () => {
             <div className="grid gap-8 sm:grid-cols-2">
               {missionItems.map((item)=>(
                 <div className="card" key={item.id}>
-                  <div className="bg-[#00715D] max-w-max p-[14px] rounded-full">
+                  <div className="bg-[#00715d] max-w-max p-[14px] rounded-full">
                     <img src={item.imgURL} alt={item.title} />
                   </div>
                   <div className="">

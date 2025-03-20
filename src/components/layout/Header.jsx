@@ -4,22 +4,24 @@ import { navItems } from "../../constant/data";
 import { IoClose, IoMenu } from "react-icons/io5";
 const Header = () => {
     const [menuOpen,setMenuOpen] = useState(false);
-    const [isScrolled,setIsScrolled] = useState(false);
     const headerRef = useRef(null);
-    useEffect(()=>{
-    const handleScroll = () => {
-        if(window.scrollY > 50){
-            setIsScrolled(true);
-        }else{
-            setIsScrolled(false);
-        }
-    };
-    window.addEventListener("scroll",handleScroll);
-    return ()=> window.removeEventListener('scroll',handleScroll);
-    },[])
+    useEffect(() => {
+        const handleScroll = () => {
+          if (window.scrollY > 100) {
+            headerRef.current.classList.add("active");
+          } else {
+            headerRef.current.classList.remove("active");
+          }
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+        }, []);
 
   return (
-    <header ref={headerRef} className={`header ${isScrolled ? "active" : ""}`}>
+    <header ref={headerRef} className="header">
         <div className="container flex items-center justify-between">
             <Link to='/'>
             <img src="/images/MOM.png" alt="MOM" />
@@ -47,7 +49,7 @@ const Header = () => {
                     </li>
                 ))}
             </ul>
-            <Link to='' className="btn hidden md:block">Sign Up</Link>
+            <Link to='signUp' className="btn hidden md:block">Sign Up</Link>
 
             <button className="text-[35px] hover:text-[#00715D] transition-colors md:hidden" onClick={()=>setMenuOpen(!menuOpen)}>
                 <IoMenu />

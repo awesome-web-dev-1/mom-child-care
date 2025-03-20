@@ -10,6 +10,7 @@ import BlogDetials from './pages/BlogDetials';
 import TeamDetails from './pages/TeamDetails';
 import Layout from './components/layout/Layout';
 import ServicesDetail from './pages/servicesDetail';
+import RegisLog from './pages/RegisLog';
 const App = () => {
   return (
     <BrowserRouter>
@@ -24,7 +25,8 @@ const App = () => {
           <Route path='services:id' element={<ServicesDetail />}/>
           <Route path='team:id' element={<TeamDetails />}/>
         </Route>
-          <Route path='*' element={<Error />} />
+        <Route path='signUp' element={<RegisLog />}/>
+        <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
   )

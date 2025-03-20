@@ -19,17 +19,14 @@ const TestiSec = () => {
               <IoArrowForward />
             </Link>
         </div>
-        <div className="grid gap-[30px] md:grid-cols-2 mt-[40px] md:mt-[70px]">
+        <div className="grid gap-10 mt-[40px] md:mt-[70px] sm:grid-cols-2">
           {testimonialsItems.map((item)=>(
-            <div className="grid xs:grid-cols-2 gap-[22px] p-[14px] border border-[#D9DADB]" key={item.id}>
-              <div className="flex-shrink-0">
-                <img src={item.imgURL} alt={item.author} width={222} height={251} className="img-cover" />
-              </div>
+            <div className="border border-neutral-500/25 rounded-lg p-5" key={item.id}>
               <div className="">
                 <span className="text-[37px] text-[#00715D]">
                   <IoMdQuote />
                 </span>
-                <p className="">{item.text}</p>
+                <p className="text-[20px] font-semibold my-8">{item.text}</p>
                 <div className="flex text-2xl text-[#FFD53F] gap-2">
                   <IoStar />
                   <IoStar />
@@ -38,7 +35,12 @@ const TestiSec = () => {
                   <IoStar />
                 </div>
                 <div className="w-full h-[1px] bg-neutral-200 mt-3 mb-[10px]"></div>
-                <div className="bt-[10px] flex gap-2 flex-wrap">
+              </div>
+              <div className="flex gap-8">
+                <div className="rounded-full w-[60px] h-[60px] overflow-hidden flex-shrink-0">
+                  <img src={item.imgURL} alt={item.author} className="object-cover" />
+                </div>
+                <div className="block gap-10">
                   <p className="font-bold">{item.author}</p>
                   <p>{item.job}</p>
                 </div>

@@ -7,10 +7,10 @@ const BlogSec1 = () => {
     <section className="py-[100px] mt-8 bg-[#00715d] md:max-h-[524px] h-full">
           <div className="container">
             <div className="md:flex md:justify-between items-start">
-              <div className="sm:max-w-[531px] relative">
+              <div className="relative max-w-max">
                 <p className="text-[#FFD249]">Blog</p>
                 <div className="relative mb-10">
-                  <h2 className="text-white max-w-max">Inspiration and Guidance for Child</h2>
+                  <h2 className="text-white max-w-max">Inspiration and Guidance <br /> for Child</h2>
                   <img src="/images/shape-4.png" alt="shape image" className="absolute -top-2 -right-8" />
                 </div>
                 
