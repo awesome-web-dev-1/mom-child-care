@@ -7,7 +7,7 @@ const Header = () => {
     const headerRef = useRef(null);
     useEffect(() => {
         const handleScroll = () => {
-          if (window.scrollY > 100) {
+          if (window.scrollY > 50) {
             headerRef.current.classList.add("active");
           } else {
             headerRef.current.classList.remove("active");

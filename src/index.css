@@ -3,23 +3,11 @@
 @tailwind utilities;
 
 @layer base{
+    html{
+        @apply overflow-x-hidden
+    }
    body{
     @apply bg-white overflow-x-hidden
-   }
-   h1,h2,h3,h4{
-    @apply font-bold leading-[1.4] text-balance font-quicksand
-   }
-   h1,h2,h3,h4{
-    @apply font-bold leading-[1.4] text-4xl sm:text-[46px] md:text-[56px] text-balance
-   }
-   h2{
-    @apply text-3xl md:text-[42px] leading-tight
-   }
-   h3{
-    @apply text-[20px]
-   }
-   p{
-    @apply text-[#3F444D] font-quicksand md:text-[18px]
    }
    input,textarea{
     @apply outline-none w-full block h-full px-[25px]
@@ -36,6 +24,21 @@
 }
 
 @layer utilities{
+    h1,h2,h3,h4{
+        @apply font-bold leading-[1.4] text-balance font-quicksand
+    }
+    h1,h2,h3,h4{
+    @apply font-bold leading-[1.4] text-4xl sm:text-[46px] md:text-[56px] text-balance
+    }
+    h2{
+    @apply text-3xl md:text-[42px] leading-tight
+    }
+    h3{
+    @apply text-[20px]
+    }
+    p{
+    @apply text-[#3F444D] font-quicksand md:text-[18px]
+    }
     .container{
         @apply px-4 mx-auto xs:max-w-[520px] sm:max-w-[740px] md:max-w-[960px] lg:max-w-[1150px] xl:max-w-[1350px]
     }
@@ -67,7 +70,7 @@
 /* ============= */
 /* Header */
 .header{
-    @apply py-[25px] w-full fixed top-0 left-0 z-10 transition-transform
+    @apply py-[20px] w-full fixed top-0 left-0 z-10 transition-transform
 }
 .header.active{
     background: white;

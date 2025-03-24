@@ -11,9 +11,11 @@ import TeamDetails from './pages/TeamDetails';
 import Layout from './components/layout/Layout';
 import ServicesDetail from './pages/servicesDetail';
 import RegisLog from './pages/RegisLog';
+import ScrollToTop from './components/common/ScrollToTop';
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />}/>
