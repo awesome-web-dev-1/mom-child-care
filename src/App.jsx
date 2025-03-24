@@ -9,7 +9,7 @@ import Error from './pages/Error';
 import BlogDetials from './pages/BlogDetials';
 import TeamDetails from './pages/TeamDetails';
 import Layout from './components/layout/Layout';
-import ServicesDetail from './pages/servicesDetail';
+import ServicesDetail from './pages/ServicesDetail';
 import RegisLog from './pages/RegisLog';
 import ScrollToTop from './components/common/ScrollToTop';
 const App = () => {
